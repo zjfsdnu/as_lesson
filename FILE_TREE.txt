@@ -1,0 +1,115 @@
+x86-64 汇编语言教程 文件树（2026-10-07）
+
+.
+|-- .DS_Store
+|-- DEPLOY.md
+|-- FILE_TREE.txt
+|-- include
+|   |-- io.inc
+|   `-- syscalls.inc
+|-- INSTRUCTOR.md
+|-- lesson01
+|   |-- hello_exit.asm
+|   |-- hello.asm
+|   |-- Makefile
+|   |-- README.md
+|   `-- test.sh
+|-- lesson02
+|   |-- Makefile
+|   |-- mem.asm
+|   |-- README.md
+|   |-- regs.asm
+|   `-- test.sh
+|-- lesson03
+|   |-- data.asm
+|   |-- Makefile
+|   |-- README.md
+|   |-- strlen.asm
+|   `-- test.sh
+|-- lesson04
+|   |-- arith.asm
+|   |-- bitops.asm
+|   |-- flags.asm
+|   |-- Makefile
+|   |-- README.md
+|   `-- test.sh
+|-- lesson05
+|   |-- cmpjmp.asm
+|   |-- Makefile
+|   |-- minmax.asm
+|   |-- README.md
+|   `-- test.sh
+|-- lesson06
+|   |-- count.asm
+|   |-- Makefile
+|   |-- README.md
+|   |-- sum_array.asm
+|   `-- test.sh
+|-- lesson07
+|   |-- add_func.asm
+|   |-- Makefile
+|   |-- multi_args.asm
+|   |-- README.md
+|   |-- stack_demo.asm
+|   `-- test.sh
+|-- lesson08
+|   |-- Makefile
+|   |-- num2str.asm
+|   |-- README.md
+|   |-- str2num.asm
+|   `-- test.sh
+|-- lesson09
+|   |-- copy.asm
+|   |-- Makefile
+|   |-- README.md
+|   |-- test.sh
+|   `-- wc.asm
+|-- lesson10
+|   |-- lc_float_div.asm
+|   |-- lc_float.asm
+|   |-- Makefile
+|   |-- README.md
+|   `-- test.sh
+|-- lesson11
+|   |-- lc_simd_intro.asm
+|   |-- Makefile
+|   |-- README.md
+|   |-- simd_strlen.asm
+|   `-- test.sh
+|-- lesson12
+|   |-- lc_inline.asm
+|   |-- lc_inline.c
+|   |-- macro_demo.asm
+|   |-- Makefile
+|   |-- README.md
+|   `-- test.sh
+|-- lesson13
+|   |-- c_driver.c
+|   |-- lc_asm_lib.asm
+|   |-- lc_opt.asm
+|   |-- Makefile
+|   |-- README.md
+|   `-- test.sh
+|-- lesson14
+|   |-- debug_target.asm
+|   |-- hexdump.asm
+|   |-- Makefile
+|   |-- README.md
+|   `-- test.sh
+|-- lesson15
+|   |-- hexdump2.asm
+|   |-- Makefile
+|   |-- README.md
+|   |-- test.sh
+|   `-- wordcount.asm
+|-- Makefile
+|-- README.md
+|-- SOURCE_LISTING.txt
+`-- tools
+    |-- gen_makefiles.py
+    |-- lint_asm.py
+    |-- remote_check.sh
+    |-- source_listing.sh
+    `-- verify_remote.sh
+
+18 directories, 93 files

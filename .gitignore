@@ -1,0 +1,89 @@
+# ===========================================================================
+# x86-64 汇编语言教程（NASM）—— Git 忽略规则
+#
+# 本仓库的构建产物分两类：
+#   1) 无扩展名的可执行文件：名字 = 对应 .asm / .c 去掉扩展名
+#      （Makefile 里的 "%: %.asm" 和 "lc_%: lc_%.asm" 就是这么生成的）
+#      → 这类文件没法用一条通配符概括，只能逐个列出。
+#   2) 通用中间 / 临时 / 调试文件 → 用通配符。
+#
+# 新增课程示例后，请把新的可执行文件名补进下面「每课可执行文件」一节。
+# ===========================================================================
+
+# ---- 通用编译 / 链接产物 -------------------------------------------------
+# nasm -o xxx.o 及 gcc 的中间目标文件
+*.o
+# gcc 未指定 -o 时的默认输出名
+a.out
+# nasm -l 生成的列表文件
+*.lst
+# macOS 下的调试符号目录
+*.dSYM/
+
+# ---- 测试脚本临时产物 ---------------------------------------------------
+#   lesson12/test.sh  生成 lc_inline_mix_asm.o 及保留的可执行文件 lc_inline_c
+#   lesson13/test.sh  生成 lc_asm_lib.o、lc_asm_lib_nomain.o 及 mix、mix_nomain
+/mix
+/mix_nomain
+
+# ---- 调试 / 崩溃遗留 ----------------------------------------------------
+core
+core.*
+*.gdb_history
+
+# ---- 编辑器 / 操作系统 --------------------------------------------------
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+.DS_Store
+
+# ---- 每课可执行文件（无扩展名，逐个列出）--------------------------------
+/lesson01/hello
+/lesson01/hello_exit
+
+/lesson02/mem
+/lesson02/regs
+
+/lesson03/data
+/lesson03/strlen
+
+/lesson04/arith
+/lesson04/bitops
+/lesson04/flags
+
+/lesson05/cmpjmp
+/lesson05/minmax
+
+/lesson06/count
+/lesson06/sum_array
+
+/lesson07/add_func
+/lesson07/multi_args
+/lesson07/stack_demo
+
+/lesson08/num2str
+/lesson08/str2num
+
+/lesson09/copy
+/lesson09/wc
+
+/lesson10/lc_float
+/lesson10/lc_float_div
+
+/lesson11/lc_simd_intro
+/lesson11/simd_strlen
+
+/lesson12/lc_inline
+/lesson12/macro_demo
+/lesson12/lc_inline_c
+
+/lesson13/lc_asm_lib
+/lesson13/lc_opt
+
+/lesson14/debug_target
+/lesson14/hexdump
+
+/lesson15/hexdump2
+/lesson15/wordcount
